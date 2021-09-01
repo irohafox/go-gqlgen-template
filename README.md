@@ -30,6 +30,36 @@ $ docker-compose run --rm web bash
 $ go mod tidy
 ```
 
+
+## エンドポイント
+```
+http://localhost:5001/がPlayground
+http://localhost:5001/queryがWebAPIエンドポイント
+```
+
+## 実装済みのresolverに対するサンプルqueries
+```
+mutation createTodo {
+  createTodo(input:{text:"todo", userId:"1"}) {
+    user {
+      id
+    }
+    text
+    done
+  }
+}
+
+query findTodos {
+    todos {
+      text
+      done
+      user {
+        name
+      }
+    }
+}
+```
+
 ## gqlgenのインストールについて
 ```
 本来であればgqlgenはgo installでのツールのグローバルインストールに限定したいが、
