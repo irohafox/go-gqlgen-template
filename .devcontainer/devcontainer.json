@@ -1,0 +1,16 @@
+{
+  "name": "go",
+  "dockerComposeFile": [
+    "../docker-compose.yml"
+  ],
+  "service": "web",
+  "workspaceFolder": "/go/src/go-gqlgen-template",
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash",
+    "go.gopath": "/go"
+  },
+  "extensions": [
+    "ms-vscode.go",
+  ],
+  "shutdownAction": "stopCompose"
+}
