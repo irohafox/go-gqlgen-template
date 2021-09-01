@@ -30,8 +30,10 @@ $ docker-compose run --rm web bash
 $ go mod tidy
 ```
 
-## 備考
+## gqlgenのインストールについて
 ```
-本来であればgqlgenはgo installで入れたいが、binのディレクトリ名にバージョンが入ってしまい、
-上手く動作できないため、非推奨にはなっているが暫定的にgo getで対応
+本来であればgqlgenはgo installでのツールのグローバルインストールに限定したいが、binのディレクトリ名にバージョンが入ってしまい、CMDが上手く動作できない。
+
+そのため、Dockerfileでgo installをしてgqlgenコマンドをコンテナ内で使用できるようにしつつ、
+go getでモジュールとしても入れた上でgo mod tidyで不要な依存モジュールは削除している。
 ```
