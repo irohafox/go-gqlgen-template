@@ -4,6 +4,6 @@ RUN apt update && apt install git
 RUN go install github.com/cosmtrek/air@v1.27.3
 RUN go install github.com/99designs/gqlgen@v0.13.0
 
-RUN mkdir /go/src/go-gqlgen-template
-WORKDIR /go/src/go-gqlgen-template
-ADD . /go/src/go-gqlgen-template
+RUN mkdir /go/src/app
+WORKDIR /go/src/app
+ADD . /go/src/app

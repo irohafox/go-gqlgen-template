@@ -4,7 +4,7 @@
     "../docker-compose.yml"
   ],
   "service": "web",
-  "workspaceFolder": "/go/src/go-gqlgen-template",
+  "workspaceFolder": "/go/src",
   "settings": {
     "terminal.integrated.shell.linux": "/bin/bash",
     "go.gopath": "/go"
